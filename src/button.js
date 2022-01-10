@@ -12,13 +12,15 @@ const send = async (foo) => {
         },
         body: JSON.stringify({
             type: foo,
+            year: newDate.getFullYear(),
+            month: newDate.getMonth(),
             day: newDate.getDay(),
             hour: newDate.getHours(),
             minute: newDate.getMinutes()
         })
     }
 
-    fetch("http://shanewinand.net/", postOptions)
+    fetch("http://localhost:3001/", postOptions)
 };
 
 const Button = (props) => {
